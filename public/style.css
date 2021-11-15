@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Popbins',sans-serif;
+   
+  
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+/* variable */
+/* @mixin flexing(){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+} */
+
+main{
+   top:  50%;
+   left: 50%;
+   position: absolute;
+   width: 80%;
+   overflow: hidden;
+   border-radius: 10px;
+   /* any thing goes beyond the width then this should be hidden */
+   transform: translate(-50%,-50%);   
+}
+header{
+    background-color: lightblue;
+    color: white;
+    padding:5px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+header div.title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header div.title h1{
+     font-size: 1rem;
+     margin-left: 20px;
+     
+}
+header div.title h6{
+    margin-left: 20px;
+    font-size: 1rem;
+    font-style: italic;
+}
+header button{
+    background-color: transparent;
+    border: none;
+    display: none;
+    outline: none;
+}
+header div.searchView input{
+    width: 300px;
+    height: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    color: blue;
+    
+}
+  main div.container{
+      background-color: gray;
+      padding: 20px;
+
+ }
+ main div.userWindow{
+     background-color: whitesmoke;
+     width: 350px;
+     padding: 15px 20px;
+     border-radius: 10px;
+     color: blue;
+ }
+
+ div.userWindow div.userHead{
+    display: flex;
+    color: yellow;
+    background-color: turquoise;
+    border-radius: 10px;
+    padding: 10px;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+ }
+ div.userWindow div.userHead h4{
+     background-color: white;
+     border-radius: 50%;
+     padding: 10px;
+     color: red;
+ }
+
+ div.userWindow div.userList p{
+     font-size: 1rem;
+     font-weight: 200;
+     letter-spacing: 1px;
+     margin-bottom: 15px;
+ }
+/*  setting for userwindow and chatWindow */
+ div.container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+ }
+ main div.userWindow{
+     margin-right: 30px;
+     
+ }
+ main div.chatWindow{
+    width: 100%;
+    background-color: indianred;
+    border-radius: 10px;
+    padding: 15px 20px;
+    overflow-y: scroll;
+ }
+
+ main div.chatWindow div.chats{
+     height: 65vh;
+     overflow-y: auto;
+
+ }
+ /* for joined people */
+ main div.chatWindow div.chats div.userJoin{
+     font-size: 1rem;
+     color: darkgrey;
+     background-color: white;
+     width: max-content;
+     padding: 10px 20px;
+     margin: 0 auto;
+     border-radius: 50px;
+     margin-bottom: 15px;
+ }
+ /* for message text style and background */
+ main div.chatWindow div.chats div.message{
+  color: darkgrey;
+  background-color: white;
+  max-width: 400px;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  border-radius: 10px 50px 50px 10px;
+}
+main div.chatWindow div.chats div.outgoing{
+    margin-left: auto;
+    color: white;
+    background-color: gray;
+    text-align: right;
+    border-radius: 50px 10px 10px 50px;
+}
+/*  for setting input users */
+div.chatWindow div.userInput{
+
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 20px;
+    justify-content: space-between;
+}
+div.userInput input{
+    background-color: white;
+    padding: 10px 10px ;
+    width: 100%;
+    color: blue;
+    font-size: .9rem;
+    outline: none;
+    border: none;
+    border-radius: 50px 0px 0px 50px;
+}
+
+div.userInput button{
+
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px;
+    font-weight: 500;
+    background-color: lightblue;
+  border-radius:  0 40px 40px 0;
+    
+}
+@media screen and (max-width:900px) {
+    main{
+        width: 95%;
+    }
+    header div.title h1{
+        margin: 10px;
+    }
+    header div.searchView input{
+        width: 120px;
+        height: 35px;
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+    header button{
+        display: block;
+    }
+
+    div.container {
+        position: relative;
+      
+    }
+    div.container  div.userWindow{
+       
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            border-radius: 0 0 10px 10px;
+            height: max-content;
+            padding-bottom: 0;display: none;
+            box-shadow: 0 15px 20px -20px white;
+        
+    }
+
+    div.chatWindow  div.chats div.message{
+        max-width: 300px;
+    }
+    
+}
+
+@media screen and (max-width:300px){
+    header div.searchView input{
+        width: 200px;
+    }
+}

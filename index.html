@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="title">
+            <img src="webdeveloper.png" alt="logo" width="35px">
+
+            <h1>MyChatApp</h1>
+            <div class="typingHere">
+               
+            </div>
+            
+        </div>
+        <div class="searchView">
+            <input type="text" name="searchView" id="" placeholder="Search Here ...">
+        </div>
+            <button onclick="show_hide()">
+                <img src="students.png" alt="headerLogo" width="50px">
+            </button>
+        </header>
+<div class="container">
+    <!-- set tyhe userWindow anf chat windom in 1 row -->
+    <div class="userWindow">
+            <div class="userHead">
+                <h3><b>Total Users</b></h3>
+                <h4 class="user-count">0</h4>
+            </div>
+            <div class="user-list">
+               
+
+            </div>
+    </div>
+    <div class="chatWindow">
+        <div class="chats">
+         
+            <!-- <div class="message incoming">
+                <h5>Santosh</h5>
+                <p>Hello Sanjay</p>
+            </div>
+            <div class="message outgoing">
+                <h5>Sanjay</h5>
+                <p>Hello</p>
+            </div> -->
+        </div>
+        <div class="userInput">
+            <input type="text" name="" id="userMsg"
+             placeholder="Type your message...">
+             <button type="button" id="userBtn">Send</button>
+        </div>
+    </div>
+</div>
+    </main>
+
+    <!-- script -->
+    <script>
+        var uWindow= document.querySelector('.userWindow');
+        function show_hide(){
+          if(uWindow.style.display=="block"){
+              uWindow.style.display="none";
+          }
+          else{
+              uWindow.style.display="block";
+          }
+        }
+    </script>
+
+    <script src="/socket.io/socket.io.js">
+
+    </script>
+    <script src="/client.js"></script>
+</body>
+</html>
